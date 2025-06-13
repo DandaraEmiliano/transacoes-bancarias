@@ -131,7 +131,7 @@ Content-Type: application/json
 ```
 ---
 
-## 👩‍💻 Autora
+## 👩🏻‍💻 Autora
 
 **Dandara Emiliano**  
 [GitHub](https://github.com/DandaraEmiliano) · [LinkedIn](https://linkedin.com/in/dandaraemiliano)
