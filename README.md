@@ -16,22 +16,23 @@ Este projeto simula um sistema de pagamentos entre contas bancárias usando Java
 - ✅ **Insomnia/Postman** (testes de API)
 
 ---
-
 ## 📌 Funcionalidades
 
 ### 📂 Contas Bancárias
 
-| Método | Endpoint        | Descrição                         |
-|--------|------------------|-----------------------------------|
-| `POST` | `/contas`        | Cria uma nova conta bancária      |
-| `GET`  | `/contas`        | Lista todas as contas cadastradas |
-| `GET`  | `/contas/{numero}` | Consulta uma conta pelo número    |
+| Método  | Endpoint             | Descrição                                |
+|---------|----------------------|------------------------------------------|
+| `POST`  | `/contas`            | Cria uma nova conta bancária             |
+| `GET`   | `/contas`            | Lista todas as contas cadastradas        |
+| `GET`   | `/contas/{numero}`   | Consulta uma conta pelo número da conta  |
+| `PUT`   | `/contas/{id}`       | Atualiza os dados de uma conta           |
+| `DELETE`| `/contas/{id}`       | Remove uma conta pelo ID                 |
 
 ### 💸 Transações
 
-| Método | Endpoint        | Descrição                                  |
-|--------|------------------|----------------------------------------------|
-| `POST` | `/transacoes`    | Realiza uma transferência entre duas contas |
+| Método | Endpoint      | Descrição                                       |
+|--------|----------------|-------------------------------------------------|
+| `POST` | `/transacoes`  | Realiza uma transferência entre duas contas    |
 
 ---
 
@@ -58,7 +59,6 @@ Crie o banco e usuário no PostgreSQL:
 ```sql
 CREATE DATABASE pagamentos;
 CREATE USER seu_usuario WITH PASSWORD 'sua_senha';
-GRANT ALL PRIVILEGES ON DATABASE pagamentos TO dandaraemiliano;
 ```
 
 ### 4. Configurar o `application.properties`
