@@ -1,4 +1,3 @@
-
 # 💳 Sistema de Transações Bancárias
 
 Este projeto simula um sistema de pagamentos entre contas bancárias usando Java e Spring Boot. Ele permite criar contas, consultar informações e realizar transferências com persistência em banco de dados PostgreSQL.
@@ -16,6 +15,7 @@ Este projeto simula um sistema de pagamentos entre contas bancárias usando Java
 - ✅ **Insomnia/Postman** (testes de API)
 
 ---
+
 ## 📌 Funcionalidades
 
 ### 📂 Contas Bancárias
@@ -84,12 +84,20 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ## 📦 Estrutura de pacotes
 
 ```
-sistema.de.pagamento.transacional
-├── controller         # Controllers REST
-├── model              # Entidades JPA
-├── repository         # Interfaces JPA
-├── service            # Lógica de negócio
-└── TransacionalApplication.java
+com.dandaraemiliano.transacoes_bancarias
+├── controller             
+│   ├── ContaController.java
+│   └── TransacaoController.java
+├── dto                   
+│   └── TransacaoRequest.java
+├── model                 
+│   └── Conta.java
+├── repository            
+│   └── ContaRepository.java
+├── service               
+│   ├── ContaService.java
+│   └── TransacaoService.java
+└── TransacoesBancariasApplication.java
 ```
 
 ---
@@ -104,7 +112,7 @@ Content-Type: application/json
 
 {
   "titular": "Dandara",
-  "numeroConta": "1111",
+  "numeroConta": "1010",
   "saldo": 1000.00
 }
 ```
@@ -116,21 +124,11 @@ POST /transacoes
 Content-Type: application/json
 
 {
-  "origem": "1111",
-  "destino": "2222",
-  "valor": 250.00
+  "origem": "1010",
+  "destino": "2020",
+  "valor": 50.00
 }
 ```
-
----
-
-## 📈 Próximos passos
-
-- 🔐 Implementar autenticação com JWT
-- 📄 Documentar com Swagger/OpenAPI
-- 🧪 Adicionar testes unitários e de integração
-- ☁️ Publicar em ambiente cloud (Heroku, Render, etc)
-
 ---
 
 ## 👩‍💻 Autora
